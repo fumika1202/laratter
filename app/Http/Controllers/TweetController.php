@@ -48,7 +48,8 @@ class TweetController extends Controller
      * Display the specified resource.
      */
     public function show(Tweet $tweet)
-    {
+    {   
+        $tweet->load('comments');
         return view('tweets.show', compact('tweet'));
     }
 
