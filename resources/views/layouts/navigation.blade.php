@@ -24,6 +24,11 @@
           <x-nav-link :href="route('tweets.search')" :active="request()->routeIs('tweets.search')">
             {{ __('Tweet検索') }}
           </x-nav-link>
+          <!--自分で追加した分-->
+          <x-nav-link :href="route('tweets.trend')" :active="request()->routeIs('tweets.trend')">
+            {{ __('Tweetトレンド') }}
+          </x-nav-link>
+
           <!-- 🔽 リンク追加 -->
           <x-nav-link :href="route('profile.show', auth()->user())" :active="request()->routeIs('profile.show')">
             {{ __('マイページ') }}
@@ -92,6 +97,11 @@
       <x-responsive-nav-link :href="route('tweets.search')" :active="request()->routeIs('tweets.search')">
         {{ __('Tweet検索') }}
       </x-responsive-nav-link>
+      <!--自分で追加した分-->
+      <x-responsive-nav-link :href="route('tweets.trend')" :active="request()->routeIs('tweets.trend')">
+        {{ __('Tweetトレンド') }}
+      </x-responsive-nav-link>
+
       <!-- 🔽 リンク追加 -->
       <x-responsive-nav-link :href="route('profile.show', auth()->user())" :active="request()->routeIs('profile.show')">
         {{ __('マイページ') }}

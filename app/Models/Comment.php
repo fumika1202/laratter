@@ -22,4 +22,10 @@ class Comment extends Model
   {
     return $this->belongsTo(User::class);
   }
+
+  //自分が追加した分
+      public function likes()
+    {
+        return $this->belongsToMany(User::class, 'comment_user'); // 中間テーブルの指定
+    }
 }
