@@ -21,6 +21,11 @@ class Tweet extends Model
       return $this->belongsToMany(User::class)->withTimestamps();
   }
 
+   public function likes()
+  {
+      return $this->belongsToMany(User::class, 'likes');   
+  }
+
   public function comments()
   {
     return $this->hasMany(Comment::class)->orderBy('created_at', 'desc');
