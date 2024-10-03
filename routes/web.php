@@ -25,7 +25,7 @@ Route::middleware('auth')->group(function () {
   // 🔽 検索のルーティングを追加
   Route::get('/profile/{user}', [ProfileController::class, 'show'])->name('profile.show');
   Route::get('/tweets/search', [TweetController::class, 'search'])->name('tweets.search');
-    //自分て追加した分
+  //自分で追加した分
   Route::get('/tweets/trend', [TrendController::class, 'show'])->name('tweets.trend');
   Route::resource('tweets', TweetController::class);
   Route::post('/tweets/{tweet}/like', [TweetLikeController::class, 'store'])->name('tweets.like');
